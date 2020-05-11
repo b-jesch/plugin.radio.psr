@@ -4,7 +4,8 @@ import xbmcplugin
 import xbmcgui
 
 import sys
-from urllib.parse import parse_qsl, urlencode
+from urlparse import parse_qsl
+from urllib import urlencode
 import os
 
 addon = xbmcaddon.Addon()
