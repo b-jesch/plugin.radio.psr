@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.radio.psr"
-version="3.0.0+matrix"
+version="3.0.1+matrix"
 name="Radio PSR"
 provider-name="Birger Jesch">
 <requires>

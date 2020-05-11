@@ -41,16 +41,19 @@ def list_streams():
         liz.setPath(streams[stream][0])
         liz.setArt({'icon': get_image(streams[stream][1]), 'fanart': get_image('fanart.jpg')})
         liz.setProperty('IsPlayable', 'true')
-        url = get_url({'action': 'play', 'url': streams[stream][0], 'icon': get_image(streams[stream][1])})
+        url = get_url({'action': 'play', 'url': streams[stream][0],
+                       'icon': get_image(streams[stream][1]),
+                       'title': 'Radio PSR \'{}\' Stream'.format(stream)})
         xbmcplugin.addDirectoryItem(_handle, url, liz, isFolder=False)
 
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
     xbmcplugin.endOfDirectory(_handle)
 
 
-def play_stream(path, icon):
+def play_stream(path, icon, title):
     xbmc.log('Playing {}'.format(path))
     play_item = xbmcgui.ListItem(path=path)
+    play_item.setInfo('music', {'title': title})
     play_item.setArt({'icon': icon, 'thumb': icon, 'fanart': get_image('fanart.jpg')})
     xbmcplugin.setResolvedUrl(_handle, True, listitem=play_item)
 
@@ -60,7 +63,7 @@ def router(route):
     xbmc.log('Parameter list: {}'.format(params), xbmc.LOGDEBUG)
     if params:
         if params['action'] == 'play':
-            play_stream(params['url'], params['icon'])
+            play_stream(params['url'], params['icon'], params['title'])
     else:
         list_streams()
 
