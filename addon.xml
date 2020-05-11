@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.radio.psr"
+version="3.0.0+matrix"
+name="Radio PSR"
+provider-name="Birger Jesch">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="default.py">
+  <provides>audio</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Radio PSR Streams</summary>
+  <description lang="en_GB">Listen to various streams of Radio PSR</description>
+  <disclaimer lang="en_GB">No warranty</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>resources/images/fanart.jpg</fanart>
+  </assets>
+  <news>Initial Release for Matrix</news>
+</extension>
+</addon>
