@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.radio.psr"
-version="3.0.0+matrix"
+version="0.0.1"
 name="Radio PSR"
 provider-name="Birger Jesch">
 <requires>
-  <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="xbmc.python" version="2.25.0"/>
 </requires>
 <extension point="xbmc.python.pluginsource" library="default.py">
   <provides>audio</provides>
@@ -17,6 +17,6 @@ provider-name="Birger Jesch">
     <icon>icon.png</icon>
     <fanart>resources/images/fanart.jpg</fanart>
   </assets>
-  <news>Initial Release for Matrix</news>
+  <news>Initial Release for Krypton</news>
 </extension>
 </addon>
