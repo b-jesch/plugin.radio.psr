@@ -9,6 +9,7 @@ import os
 
 addon = xbmcaddon.Addon()
 addonpath = addon.getAddonInfo('path')
+player = xbmc.Player()
 
 streams = dict({'PSR Live': ['http://psr.hoerradar.de/psr-live-mp3-hq', 'stream-tile-live.jpg'],
                 'Deutschpop Nonstop': ['http://psr.hoerradar.de/psr-deutschpop-mp3-hq', 'stream-tile-deutschpop.jpg'],
@@ -51,6 +52,9 @@ def list_streams():
 
 
 def play_stream(path, icon, title):
+    if player.isPlaying():
+        xbmc.log('Stop player')
+        player.stop()
     xbmc.log('Playing {}'.format(path))
     play_item = xbmcgui.ListItem(path=path)
     play_item.setInfo('music', {'title': title})
