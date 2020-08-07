@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.radio.psr"
-version="3.0.3+matrix"
-name="Radio PSR"
-provider-name="Birger Jesch">
+<addon id="plugin.radio.psr" version="3.0.3+matrix" name="Radio PSR" provider-name="Birger Jesch">
 <requires>
   <import addon="xbmc.python" version="3.0.0"/>
 </requires>
