@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import xbmc
 import xbmcaddon
 import xbmcplugin
@@ -12,18 +14,24 @@ addon = xbmcaddon.Addon()
 addonpath = addon.getAddonInfo('path')
 player = xbmc.Player()
 
-streams = dict({'PSR Live': ['http://psr.hoerradar.de/psr-live-mp3-hq', 'stream-tile-live.jpg'],
-                'Deutschpop Nonstop': ['http://psr.hoerradar.de/psr-deutschpop-mp3-hq', 'stream-tile-deutschpop.jpg'],
-                '90er': ['http://psr.hoerradar.de/psr-90er-mp3-hq', 'stream-tile-90er.jpg'],
-                '80er': ['http://psr.hoerradar.de/psr-80er-mp3-hq', 'stream-tile-80er.jpg'],
-                'Chartbreaker': ['http://psr.hoerradar.de/psr-chartbreaker-mp3-hq', 'stream-tile-chartbreaker.jpg'],
-                'Partymix': ['http://psr.hoerradar.de/psr-partymix-mp3-hq', 'stream-tile-partymix.jpg'],
-                'Sachsensongs': ['http://psr.hoerradar.de/psr-sachsensongs-mp3-mq', 'stream-tile-sachsensongs.jpg'],
-                'Sinnlos Telefon': ['http://psr.hoerradar.de/psr-sinnlostelefon-mp3-hq', 'stream-tile-sinnlos-telefon.jpg'],
-                'Kids': ['http://psr.hoerradar.de/psr-kids-mp3-hq', 'stream-tile-kids_oT.jpg'],
-                'Relax': ['http://psr.hoerradar.de/psr-relax-mp3-hq', 'stream-tile-relax.jpg'],
-                'Sommer Hits': ['http://psr.hoerradar.de/psr-sommerhits-mp3-hq', 'stream-tile-sommerhits.jpg'],
-                'Rock': ['http://psr.hoerradar.de/psr-rock-mp3-hq', 'stream-tile-rock.jpg']})
+streams = dict({'Radio PSR Live': ['http://psr.hoerradar.de/psr-live-mp3-hq', 'stream-tile-live.jpg'],
+                'Oli.P 90er Mix': ['https://90s90s.hoerradar.de/90s90s-inthemix-mp3-hq', 'stream-tile-olip.jpg'],
+                'Radio PSR Sommer Hits': ['http://psr.hoerradar.de/psr-sommerhits-mp3-hq', 'stream-tile-sommerhits.jpg'],
+                'Radio PSR Strandbar': ['https://barbaradio.hoerradar.de/barbaradio-strandbar-mp3-hq', 'stream-tile-strandbar.jpg'],
+                'Radio PSR Sommer Party': ['https://feierfreund.hoerradar.de/feierfreund-summerdance-mp3-hq', 'stream-tile-sommerparty.jpg'],
+                'Radio PSR Deutschpop Nonstop': ['http://psr.hoerradar.de/psr-deutschpop-mp3-hq', 'stream-tile-deutschpop.jpg'],
+                'Radio PSR 90er': ['http://psr.hoerradar.de/psr-90er-mp3-hq', 'stream-tile-90er.jpg'],
+                'Radio PSR 90er Dance': ['https://psr.hoerradar.de/psr-90er-dance-mp3-hq', 'stream-tile-90er-dance.jpg'],
+                'Radio PSR 80er': ['http://psr.hoerradar.de/psr-80er-mp3-hq', 'stream-tile-80er.jpg'],
+                'Radio PSR Chartbreaker': ['http://psr.hoerradar.de/psr-chartbreaker-mp3-hq', 'stream-tile-chartbreaker.jpg'],
+                'Radio PSR Partymix': ['http://psr.hoerradar.de/psr-partymix-mp3-hq', 'stream-tile-partymix.jpg'],
+                'Radio PSR Sachsensongs': ['http://psr.hoerradar.de/psr-sachsensongs-mp3-mq', 'stream-tile-sachsensongs.jpg'],
+                'Radio PSR Sinnlos Telefon': ['http://psr.hoerradar.de/psr-sinnlostelefon-mp3-hq', 'stream-tile-sinnlos-telefon.jpg'],
+                'Radio PSR Kids': ['http://psr.hoerradar.de/psr-kids-mp3-hq', 'stream-tile-kids_oT.jpg'],
+                'Radio PSR 2000er': ['https://psr.hoerradar.de/psr-2000er-mp3-hq', 'stream-tile-2000er.jpg'],
+                'Barbara Schöneberger': ['https://barbaradio.hoerradar.de/barbaradio-live-mp3-hq', 'stream-tile-schoeneberger.jpg'],
+                'Radio PSR Relax': ['http://psr.hoerradar.de/psr-relax-mp3-hq', 'stream-tile-relax.jpg'],
+                'Radio PSR Rock': ['http://psr.hoerradar.de/psr-rock-mp3-hq', 'stream-tile-rock.jpg']})
 
 
 def get_url(params):
