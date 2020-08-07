@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.radio.psr"
-version="3.0.2+matrix"
+version="3.0.3+matrix"
 name="Radio PSR"
 provider-name="Birger Jesch">
 <requires>
@@ -17,6 +17,6 @@ provider-name="Birger Jesch">
     <icon>icon.png</icon>
     <fanart>resources/images/fanart.jpg</fanart>
   </assets>
-  <news>3.0.2 - Stop player between channels to avoid crackling noises[CR]3.0.0 - Initial Release for Matrix</news>
+  <news>3.0.3 - additional Streams added[CR]3.0.2 - Stop player between channels to avoid crackling noises[CR]3.0.0 - Initial Release for Matrix</news>
 </extension>
 </addon>
