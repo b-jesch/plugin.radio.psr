@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.radio.psr" version="3.0.3+matrix" name="Radio PSR" provider-name="Birger Jesch">
+<addon id="plugin.radio.psr" version="3.0.4+matrix" name="Radio PSR" provider-name="Birger Jesch">
 <requires>
   <import addon="xbmc.python" version="3.0.0"/>
 </requires>
@@ -7,7 +7,7 @@
   <provides>audio</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
-  <summary lang="en">Radio PSR Streams</summary>
+  <summary lang="en_GB">Radio PSR Streams</summary>
   <description lang="en_GB">Listen to various streams of Radio PSR</description>
   <disclaimer lang="en_GB">No warranty</disclaimer>
   <assets>
@@ -15,5 +15,6 @@
     <fanart>resources/images/fanart.jpg</fanart>
   </assets>
   <news>3.0.3 - additional Streams added[CR]3.0.2 - Stop player between channels to avoid crackling noises[CR]3.0.0 - Initial Release for Matrix</news>
+  <lifecyclestate type="broken" lang="en_GB">Addon is broken and may crashing Kodi</lifecyclestate>
 </extension>
 </addon>
